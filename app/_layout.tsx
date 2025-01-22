@@ -26,7 +26,7 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={ DarkTheme}>
+    <ThemeProvider value={ DefaultTheme}>
       <SafeAreaView style={{flex: 1}}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
