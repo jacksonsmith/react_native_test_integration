@@ -12,7 +12,7 @@ describe('InvestmentCard', () => {
       <InvestmentCard code="MXRF11" earnings="Rendimento: R$ 0,09" amount="R$ 11,52" date="DAQUI A 2 DIAS" />
     );
 
-    expect(getByText('MXRF11')).toBeTruthy();
+    expect(getByText('MXRF10')).toBeTruthy();
   });
 
   it('displays alert', () => {

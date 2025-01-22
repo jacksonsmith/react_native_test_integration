@@ -1,57 +1,125 @@
-# React Native Expo - Teste de Integração do Investment Card
+# **Projeto de Prática de Testes de Integração com React Native**
 
-Este projeto React Native Expo é focado no componente `InvestmentCard` e tem como objetivo ensinar como criar e corrigir testes de integração. Ele inclui dois exercícios de teste:
+Este repositório foi desenvolvido para oferecer uma experiência prática na criação e execução de testes de integração em **React Native**, utilizando ferramentas modernas para garantir a funcionalidade de componentes e a interação entre eles.
 
-1. Adicionar verificações para garantir que os elementos de tela específicos sejam exibidos corretamente.
-2. Identificar e corrigir um teste quebrado.
+---
 
-## Exercícios
+## 📚 **O que são Testes de Integração?**
 
-1. **Verificação de elementos de tela**:
-   - Assegure que os seguintes textos e valores estejam presentes:
-     - **earnings**: `Rendimento: R$ 0,09`
-     - **amount**: `R$ 11,52`
-     - **date**: `DAQUI A 2 DIAS`
+Testes de integração verificam como diferentes partes do sistema trabalham juntas, garantindo que os componentes individuais, quando combinados, funcionem como esperado. Esses testes:
 
-2. **Corrigir um teste quebrado**:
-   - Um dos testes do `InvestmentCard` está quebrado. Encontre e corrija o problema para garantir que ele passe com sucesso.
+- Validam fluxos e interações completas.
+- Detectam problemas que não são evidentes em testes unitários.
+- Aumentam a confiança na entrega do software.
 
-## Requisitos
+---
 
-- Node.js e npm/yarn instalados
-- Expo CLI (`npm install -g expo-cli`)
+## 🛠 **Ferramentas Utilizadas**
 
-## Passos para Abrir e Executar o Projeto
+- **React Native**: Framework para desenvolvimento mobile.
+- **Jest**: Framework de testes para criar e executar os testes.
+- **@testing-library/react-native**: Biblioteca que facilita a criação de testes voltados para a experiência do usuário em interfaces React Native.
 
-1. **Clonar o repositório**:
-   ```bash
-   git clone https://github.com/jacksonsmith/react_native_test_integration.git
-   cd react_native_test_integration
-   ```
-2. Instalar as dependências:
+---
 
+## 🔌 **Extensões Recomendadas para VS Code**
+
+Para facilitar o desenvolvimento e execução dos testes, recomendamos instalar as seguintes extensões no Visual Studio Code:
+
+1. **[Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)**
+   - Monitora e executa os testes em tempo real enquanto você edita o código.
+   - Oferece feedback visual diretamente no editor.
+
+2. **[React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native)**
+   - Auxilia no desenvolvimento e depuração de aplicativos React Native.
+
+### Como Instalar
+1. Abra o VS Code.
+2. Acesse a aba de extensões (Ctrl+Shift+X ou Cmd+Shift+X no Mac).
+3. Pesquise por "Jest" e "React Native Tools".
+4. Clique em "Install" nas extensões listadas.
+
+---
+
+## 📁 **Estrutura do Projeto**
+
+A estrutura do projeto está organizada para destacar componentes e seus respectivos testes de integração:
+
+```
+react_native_test_integration/
+├── src/
+│   ├── components/
+│   │   ├── InvestmentCard/
+│   │   │   ├── InvestmentCard.tsx
+│   │   │   └── InvestmentCard.test.tsx
+│   ├── screens/
+│   │   ├── PortfolioScreen/
+│   │   │   ├── PortfolioScreen.tsx
+│   │   │   └── PortfolioScreen.test.tsx
+│   │   ├── EarningScreen/
+│   │   │   ├── EarningScreen.tsx
+│   │   │   └── EarningScreen.test.tsx
+├── jest.config.js
+├── package.json
+└── README.md
+```
+
+Cada pasta em `components/` e `screens/` contém:
+- O componente ou tela principal (`.tsx`).
+- O arquivo de teste de integração correspondente (`.test.tsx`).
+
+---
+
+## 📝 **Exercícios Práticos**
+
+### **1. Componente `InvestmentCard`**
+Renderiza informações sobre investimentos, como ganhos, montante e data.
+
+**Cenários de teste sugeridos**:
+- Renderizar corretamente os elementos visíveis.
+- Validar a interação com botões ou links.
+- Garantir o formato correto para dados exibidos (como datas ou valores monetários).
+
+---
+
+## 🚀 **Executando os Testes**
+
+1. Instale as dependências:
    ```bash
    npm install
-   # ou
-   yarn install
    ```
-3. Abrir o projeto no Visual Studio Code:
-Abra o Visual Studio Code e selecione File > Open Folder, depois escolha a pasta react_native_test_integration.
 
-4. Iniciar o projeto:
-   ```bash
-   expo android
-   # ou
-   expo web
-   ```
-5. Executar os testes:
-Abra um terminal dentro do Visual Studio Code e execute:
+2. Execute os testes:
    ```bash
    npm test
-   # ou
-   yarn test
    ```
 
-## Estrutura do Projeto
-Componentes: O componente InvestmentCard está localizado na pasta src/components.
-Testes: Os testes estão na pasta src/__tests__.
+3. Para executar testes em modo "watch":
+   ```bash
+   npm test -- --watch
+   ```
+
+4. Limpar o cache do Jest:
+   ```bash
+   npm test -- --clearCache
+   ```
+
+---
+
+## 🎯 **Objetivos do Projeto**
+
+1. Demonstrar como criar testes de integração em React Native.
+2. Desenvolver habilidades práticas na escrita e execução de testes.
+3. Proporcionar um ambiente prático para consolidar conhecimentos em **React Native**, **Jest**, e **@testing-library/react-native**.
+
+---
+
+## 📧 **Contato**
+
+Se tiver dúvidas ou sugestões, entre em contato comigo:
+- **Email**: [jackson.96@gmail.com](mailto:jackson.96@gmail.com)
+- **LinkedIn**: [linkedin.com/in/3jacksonsmith](https://linkedin.com/in/3jacksonsmith)
+
+---
+
+Divirta-se criando e testando componentes! 🚀
