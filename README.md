@@ -22,6 +22,19 @@ Testes de integração verificam como diferentes partes do sistema trabalham jun
 
 ---
 
+## 🔎 **Sobre o @testing-library/react-native**
+
+A biblioteca **@testing-library/react-native (RNTL)** permite realizar testes de integração em diferentes níveis, abrangendo desde componentes individuais até telas completas. 
+
+Com ela, é possível testar:
+
+- **Componentes com vários subcomponentes**: Verificando se os elementos internos são renderizados e interagem corretamente.
+- **Telas inteiras**: Validando fluxos completos de navegação e interação.
+
+O foco principal do RNTL é simular o comportamento real do usuário, garantindo que os testes reflitam cenários de uso reais.
+
+---
+
 ## 🔌 **Extensões Recomendadas para VS Code**
 
 Para facilitar o desenvolvimento e execução dos testes, recomendamos instalar as seguintes extensões no Visual Studio Code:
@@ -52,33 +65,27 @@ react_native_test_integration/
 │   │   ├── InvestmentCard/
 │   │   │   ├── InvestmentCard.tsx
 │   │   │   └── InvestmentCard.test.tsx
-│   ├── screens/
-│   │   ├── PortfolioScreen/
-│   │   │   ├── PortfolioScreen.tsx
-│   │   │   └── PortfolioScreen.test.tsx
-│   │   ├── EarningScreen/
-│   │   │   ├── EarningScreen.tsx
-│   │   │   └── EarningScreen.test.tsx
 ├── jest.config.js
 ├── package.json
 └── README.md
 ```
 
-Cada pasta em `components/` e `screens/` contém:
-- O componente ou tela principal (`.tsx`).
-- O arquivo de teste de integração correspondente (`.test.tsx`).
+O foco principal do projeto está nos testes do componente `InvestmentCard`.
 
 ---
 
-## 📝 **Exercícios Práticos**
+## 📝 **Testes Implementados**
 
-### **1. Componente `InvestmentCard`**
+### **Componente `InvestmentCard`**
 Renderiza informações sobre investimentos, como ganhos, montante e data.
 
-**Cenários de teste sugeridos**:
-- Renderizar corretamente os elementos visíveis.
-- Validar a interação com botões ou links.
-- Garantir o formato correto para dados exibidos (como datas ou valores monetários).
+Os dois testes implementados para este componente são:
+
+1. **Exibição correta das informações de investimento:**
+   Verifica se os dados do investimento (código, rendimento, montante e data) são renderizados corretamente.
+
+2. **Exibição de alerta ao interagir com o componente:**
+   Simula a interação do usuário e valida se um alerta é exibido corretamente ao pressionar um botão.
 
 ---
 
@@ -108,7 +115,7 @@ Renderiza informações sobre investimentos, como ganhos, montante e data.
 
 ## 🎯 **Objetivos do Projeto**
 
-1. Demonstrar como criar testes de integração em React Native.
+1. Demonstrar como criar testes de integração em React Native com foco em um componente específico.
 2. Desenvolver habilidades práticas na escrita e execução de testes.
 3. Proporcionar um ambiente prático para consolidar conhecimentos em **React Native**, **Jest**, e **@testing-library/react-native**.
 
