@@ -43,9 +43,6 @@ Para facilitar o desenvolvimento e execução dos testes, recomendamos instalar 
    - Monitora e executa os testes em tempo real enquanto você edita o código.
    - Oferece feedback visual diretamente no editor.
 
-2. **[React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native)**
-   - Auxilia no desenvolvimento e depuração de aplicativos React Native.
-
 ### Como Instalar
 1. Abra o VS Code.
 2. Acesse a aba de extensões (Ctrl+Shift+X ou Cmd+Shift+X no Mac).
