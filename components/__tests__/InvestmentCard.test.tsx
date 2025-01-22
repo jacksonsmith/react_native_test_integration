@@ -17,19 +17,19 @@ describe('InvestmentCard', () => {
 
   it('displays alert', () => {
     //mocks
-    const mockAlert = jest.fn()
-    global.alert = mockAlert;
+    const mockAlertFalse = jest.fn()
+    global.alert = mockAlertFalse;
 
-
-    const {getByText} = render(
+    // cria coloca na tela virtual de teste
+    const { getByText } = render(
       <InvestmentCard code="MXRF11" earnings="Rendimento: R$ 0,09" amount="R$ 11,52" date="DAQUI A 2 DIAS" />
     );
 
     const botao_mais_detalhes = getByText("MXRF11")
 
     //presiona o botão
-    fireEvent(getByText("Rendimento: R$ 0,09"), 'click')
+    fireEvent.press(botao_mais_detalhes)
 
-    expect(Alert.alert).toHaveBeenCalled();
+    expect(Alert.alert).toHaveBeenCalledTimes(1);
   });
 });
